@@ -13,7 +13,7 @@ const server = net.createServer(connection => {
 
     // Two message chunks that together make a whole message
     const firstChunk = '{ "type": "changed", "timesta';
-    const secondChunk = 'mp": "1450694370094" }\n';
+    const secondChunk = 'mp": "' + new Date() + '" }\n';
 
     // Send the first chunk immediately.
     connection.write(firstChunk);
